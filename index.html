@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AR Tours & Travels | Karnataka Tours & Taxi Services</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f8f8;
+    color:#222;
+}
+
+/* NAVBAR */
+nav{
+    background:#0d1b2a;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-nav{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-nav img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+.logo-nav h2{
+    color:#fff;
+    font-size:22px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.hero-content img{
+    width:180px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#d4af37;
+    color:#111;
+    padding:12px 25px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* SECTION */
+section{
+    padding:70px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+    color:#0d1b2a;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px 15px 10px;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+/* SERVICES */
+.services{
+    background:#fff;
+}
+
+/* CONTACT */
+.contact{
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+.contact a{
+    color:#25D366;
+    text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+    background:#08121d;
+    color:#ccc;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.nav-links{
+    display:none;
+}
+
+.logo-nav h2{
+    font-size:18px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+<div class="logo-nav">
+<img src="ar-logo.png.png" alt="AR Tours Logo">
+<h2>AR Tours & Travels</h2>
+</div>
+
+<div class="nav-links">
+<a href="#destinations">Destinations</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="ar-logo.png.png" alt="AR Tours & Travels Logo">
+
+<h1>AR Tours & Travels</h1>
+
+<p>Karnataka Tours • Taxi Services • Airport Transfers</p>
+
+
+<a class="btn" href="tel:9986632435">
+📞 Call 9986632435
+</a>
+
+<a class="btn whatsapp"
+href="https://wa.me/919986632435?text=Hello%20AR%20Tours%20%26%20Travels,%20I%20would%20like%20to%20book%20a%20vehicle.">
+💬 WhatsApp Booking
+</a>
+
+</div>
+
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+
+<h2 class="section-title">Popular Karnataka Destinations</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80">
+<h3>Coorg</h3>
+<p>Famous for coffee plantations, waterfalls and scenic hills.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80">
+<h3>Chikmagalur</h3>
+<p>Beautiful hill station with lush green landscapes.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80">
+<h3>Udupi</h3>
+<p>Temple city known for beaches and delicious cuisine.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80">
+<h3>Gokarna</h3>
+<p>Pristine beaches and spiritual attractions.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80">
+<h3>Murudeshwar</h3>
+<p>Home to the iconic Shiva statue overlooking the sea.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=80">
+<h3>Mysore</h3>
+<p>Historic palaces, gardens and royal heritage.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+
+<h2 class="section-title">Our Travel Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80">
+<h3>Airport Pick & Drop</h3>
+<p>Reliable transfers from Mangalore Airport to Udupi, Manipal, Kundapura and nearby areas.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80">
+<h3>Outstation Taxi Service</h3>
+<p>Comfortable and affordable taxi services across Karnataka.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80">
+<h3>Customized Tour Packages</h3>
+<p>Family tours, holiday trips and personalized travel plans.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80">
+<h3>Local Sightseeing</h3>
+<p>Explore Udupi, Manipal, Malpe Beach, St. Mary's Island and more.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p><strong>📞 Phone:</strong> 9108887451</p>
+
+<p><strong>📞 Phone:</strong> 9986632435</p>
+
+<p>
+<strong>📧 Email:</strong>
+armantandt@gmail.com
+</p>
+
+<p>
+<strong>📍 Office:</strong>
+Coincircle, Manipal
+</p>
+
+<p>
+<a href="https://wa.me/919986632435?text=Hello%20AR%20Tours%20%26%20Travels,%20I%20would%20like%20to%20book%20a%20vehicle.">
+💬 Book a Vehicle on WhatsApp
+</a>
+</p>
+
+</section>
+
+<footer>
+© 2026 AR Tours & Travels. All Rights Reserved.
+</footer>
+
+</body>
+</html>
