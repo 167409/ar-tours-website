@@ -1,1 +1,377 @@
+/* =========================
+   AR TOURS & TRAVELS
+   Premium Style Sheet
+========================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(13,27,42,.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.logo-nav{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-nav img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-nav h2{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#FFD700;
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-links a:hover{
+    color:#FFD700;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:95vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/car.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+    animation:fadeUp 1s ease;
+}
+
+.hero-content img{
+    width:180px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:65px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:35px;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+    display:inline-block;
+    padding:16px 38px;
+    margin:10px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.btn:first-child{
+    background:#FFD700;
+    color:#111;
+}
+
+.btn.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#0d1b2a;
+    margin-bottom:55px;
+    font-weight:700;
+}
+
+/* ================= CARDS ================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:20px;
+    font-size:24px;
+}
+
+.card p{
+    padding:0 20px 25px;
+    color:#666;
+}
+
+/* ================= VEHICLES ================= */
+
+.vehicles{
+    background:white;
+}
+
+.vehicle-fleet-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.vehicle-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:.35s;
+}
+
+.vehicle-card:hover{
+    transform:translateY(-10px);
+}
+
+.vehicle-card img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.vehicle-card:hover img{
+    transform:scale(1.08);
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:42px;
+    margin-bottom:25px;
+}
+
+.contact p{
+    margin:12px;
+    font-size:20px;
+}
+
+.contact a{
+    color:#25D366;
+    text-decoration:none;
+}
+
+.contact a:hover{
+    text-decoration:underline;
+}
+
+/* ================= WHATSAPP ================= */
+
+.floating-whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    text-decoration:none;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+    transition:.3s;
+}
+
+.floating-whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#08121d;
+    color:#ccc;
+    text-align:center;
+    padding:30px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.logo-nav h2{
+font-size:20px;
+}
+
+.nav-links{
+display:none;
+}
+
+.hero-content img{
+width:140px;
+}
+
+.btn{
+display:block;
+margin:15px auto;
+width:260px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.contact p{
+font-size:18px;
+}
+
+.vehicle-card img{
+height:250px;
+}
+
+}
