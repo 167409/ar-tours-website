@@ -85,21 +85,22 @@ footer{background:#08121d;color:#ccc;text-align:center;padding:20px;}
   </div>
 </section>
 <section id="booking" class="booking">
+
     <h2 class="section-title">Book Your Taxi</h2>
 
-    <form class="booking-form">
+    <form class="booking-form" id="bookingForm">
 
-        <input type="text" placeholder="Full Name" required>
+        <input type="text" id="name" placeholder="Full Name" required>
 
-        <input type="tel" placeholder="Phone Number" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
 
-        <input type="text" placeholder="Pickup Location" required>
+        <input type="text" id="pickup" placeholder="Pickup Location" required>
 
-        <input type="text" placeholder="Drop Location" required>
+        <input type="text" id="drop" placeholder="Drop Location" required>
 
-        <input type="date" required>
+        <input type="date" id="date" required>
 
-        <select required>
+        <select id="service" required>
             <option value="">Select Service</option>
             <option>Airport Pickup</option>
             <option>Airport Drop</option>
@@ -108,11 +109,12 @@ footer{background:#08121d;color:#ccc;text-align:center;padding:20px;}
             <option>Round Trip</option>
         </select>
 
-        <textarea placeholder="Additional Requirements (Optional)"></textarea>
+        <textarea id="message" placeholder="Additional Requirements"></textarea>
 
-        <button type="submit">Book Now</button>
+        <button type="submit">Book on WhatsApp</button>
 
     </form>
+
 </section>
 <section id="destinations">
   <h2 class="section-title">Popular Karnataka Destinations</h2>
@@ -162,7 +164,43 @@ footer{background:#08121d;color:#ccc;text-align:center;padding:20px;}
   <p><strong>📍 Office:</strong> Coincircle, Manipal</p>
   <p><a href="https://wa.me/919019982194?text=Hello%20AR%20Tours%20%26%20Travels,%20I%20would%20like%20to%20book%20a%20vehicle.">💬 Book a Vehicle on WhatsApp</a></p>
 </section>
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
 
+    e.preventDefault();
+
+    let name=document.getElementById("name").value;
+    let phone=document.getElementById("phone").value;
+    let pickup=document.getElementById("pickup").value;
+    let drop=document.getElementById("drop").value;
+    let date=document.getElementById("date").value;
+    let service=document.getElementById("service").value;
+    let message=document.getElementById("message").value;
+
+    let text =
+`🚖 *New Taxi Booking Request*
+
+👤 Name: ${name}
+
+📞 Phone: ${phone}
+
+📍 Pickup: ${pickup}
+
+🏁 Drop: ${drop}
+
+📅 Date: ${date}
+
+🚘 Service: ${service}
+
+📝 Additional Details:
+${message}`;
+
+    let url="https://wa.me/919019982194?text="+encodeURIComponent(text);
+
+    window.open(url,"_blank");
+
+});
+</script>
 <footer>© 2026 AR Tours & Travels. All Rights Reserved.</footer>
 
 <a class="floating-whatsapp" href="https://wa.me/919019982194?text=Hello%20AR%20Tours%20%26%20Travels,%20I%20would%20like%20to%20book%20a%20vehicle.">💬</a>
